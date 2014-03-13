@@ -55,9 +55,57 @@
 </p>
 
 <p>
-We are releasing <b>INET</b> at the moment.  We are working on releasing DCN and DCN-G.  To obtain INET, go to <a href="https://github.com/jvimal/libra-data">https://github.com/jvimal/libra-data</a> and follow the instructions there to generate a RIB CSV file.  We also give scripts to generate RIBs from other topologies.
+The table below shows the sizes of the topology.  Section 8.1 in <a href="http://eastzone.bitbucket.org/paper/libra.pdf">the paper</a> has a more detailed description.
+
+<table>
+  <thead>
+  <tr>
+    <th>Dataset</th>
+    <th>Switches</th>
+    <th>Rules</th>
+    <th>Subnets</th>
+  </tr>
+  </thead>
+
+  <tr>
+    <td>DCN</td>
+    <td align=right>11,260</td>
+    <td align=right>2,657,422</td>
+    <td align=right>11,136</td>
+  </tr>
+
+  <tr>
+    <td>DCN-G</td>
+    <td align=right>1,126,001</td>
+    <td align=right>265,742,626</td>
+    <td align=right>1,113,600</td>
+  </tr>
+
+  <tr>
+    <td>INET</td>
+    <td align=right>316</td>
+    <td align=right>151,649,486</td>
+    <td align=right>482,966</td>
+  </tr>
+</table>
 </p>
 
+<h4>INET</h4>
+<p>
+Download INET RIB CSV <a href="https://mega.co.nz/#!1UNDADpL!YrD-yVtdFMEiNgB2N8YjtBF_iXA3irNiqU7g1-yYDcg">here</a>. To generate INET by yourself, visit <a href="https://github.com/jvimal/libra-data">Libra data repo</a> and follow the instructions.
+</p>
+
+<h4>DCN</h4>
+<p>
+Work in progress.
+</p>
+
+<h4>DCN-G</h4>
+<p>
+Work in progress.
+</p>
+
+<h4>Format</h4>
 <p>
 The RIB CSV file contains the following:
 <pre>
@@ -67,47 +115,6 @@ Here, Prefix is in <code>IPAddress/PrefixLength</code> format denoting the
 prefix (e.g. 1.0.0.0/8).  LocalRouter is a string that is the name of the node
 in the topology.  RemoteRouter is the next hop router name the packet matching
 the routing entry should be forwarded to.
-</p>
-
-<p>
-We also have a pre-generated inet-ribs.csv file available for download.
-It is ~310MB compressed and ~5.6GB uncompressed.
-</p>
-
-<p>
-The table below shows the sizes of the topology.  Section 8.1 in <a href="http://eastzone.bitbucket.org/paper/libra.pdf">the paper</a> has a more detailed description.
-
-<table>
-	<thead>
-	<tr>
-		<th>Dataset</th>
-		<th>Switches</th>
-		<th>Rules</th>
-		<th>Subnets</th>
-	</tr>
-	</thead>
-
-	<tr>
-		<td>DCN</td>
-		<td align=right>11,260</td>
-		<td align=right>2,657,422</td>
-		<td align=right>11,136</td>
-	</tr>
-
-	<tr>
-		<td>DCN-G</td>
-		<td align=right>1,126,001</td>
-		<td align=right>265,742,626</td>
-		<td align=right>1,113,600</td>
-	</tr>
-
-	<tr>
-		<td>INET</td>
-		<td align=right>316</td>
-		<td align=right>151,649,486</td>
-		<td align=right>482,966</td>
-	</tr>
-</table>
 </p>
 
 <h3>Citation</h3>
@@ -155,7 +162,7 @@ $ git checkout gh-pages
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-      <p class="copyright">Libra datasets website maintained by <a href="https://github.com/eastzone">James Zeng</a> and <a href="https://github.com/jvimal">Vimal</a></p>
+      <p class="copyright">Libra datasets website maintained by <a href="https://github.com/eastzone">James Zeng</a> and <a href="https://github.com/jvimal">Vimal Kumar</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
