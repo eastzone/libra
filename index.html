@@ -38,7 +38,7 @@
 
 <p>Libra will be presented at <a href="https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/zeng">NSDI 2014</a> and this webpage will link to the talk once it is online.</p>
 
-<p>This website has a description of the datasets we used to evaluate Libra and external links to download it.  We are releasing this dataset as it will help the community in two ways:<br/>
+<p>This website has a description of the datasets we used to evaluate Libra and external links to download it.  We are releasing <b>ONE</b> of these datasets as it will help the community in two ways:<br/>
 <ul>
 	<li>Evaluate new graph analysis algorithms on top of the same datasets to facilitate easier and fairer comparison to Libra.</li>
 	<li>Use this dataset for testing scalability of other algorithms designed for large networks.</li>
@@ -55,7 +55,27 @@
 </p>
 
 <p>
-The table below shows the sizes of the topology.  Section 8.1 in <a href="#TODO">the paper</a> has a more detailed description.
+We are releasing <b>INET</b> at the moment.  We are working on releasing DCN and DCN-G.  To obtain INET, go to <a href="https://github.com/jvimal/libra-data">https://github.com/jvimal/libra-data</a> and follow the instructions there to generate a RIB CSV file.  We also give scripts to generate RIBs from other topologies.
+</p>
+
+<p>
+The RIB CSV file contains the following:
+<pre>
+Prefix,LocalRouter,RemoteRouter
+</pre>
+Here, Prefix is in <code>IPAddress/PrefixLength</code> format denoting the
+prefix (e.g. 1.0.0.0/8).  LocalRouter is a string that is the name of the node
+in the topology.  RemoteRouter is the next hop router name the packet matching
+the routing entry should be forwarded to.
+</p>
+
+<p>
+We also have a pre-generated inet-ribs.csv file available for download.
+It is ~310MB compressed and ~5.6GB uncompressed.
+</p>
+
+<p>
+The table below shows the sizes of the topology.  Section 8.1 in <a href="http://eastzone.bitbucket.org/paper/libra.pdf">the paper</a> has a more detailed description.
 
 <table>
 	<thead>
@@ -91,10 +111,13 @@ The table below shows the sizes of the topology.  Section 8.1 in <a href="#TODO"
 </p>
 
 <h3>Citation</h3>
-<p>If you use this dataset in your project, please use this citation:
+<p>If you use this dataset in your project, please use this citation.  The one on Google Scholar has some errors.
 <pre>
-@inproceedings {
-
+@article{zeng2014libra,
+  title={{Libra: Divide and Conquer to Verify Forwarding Tables in Huge Networks}},
+  author={Zeng, Hongyi and Zhang, Shidong and Ye, Fei and Jeyakumar, Vimalkumar and Ju, Mickey and Liu, Junda and McKeown, Nick and Vahdat, Amin},
+  journal={NSDI},
+  year={2014}
 }
 </pre>
 </p>
